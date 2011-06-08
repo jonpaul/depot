@@ -84,6 +84,7 @@ class CartsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(store_url) }
       format.xml  { head :ok }
+      format.js   { @line_item = @cart.line_items }
     end
   end
 end
